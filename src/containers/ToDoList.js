@@ -4,7 +4,6 @@ import { ToDo } from '../components/ToDo/ToDo';
 
 const ToDoList = ({ todos }) => {
   const toDoList = todos.map(todo => {
-    console.log(todo);
     return (
       <ToDo 
         { ...todo } 
@@ -14,10 +13,12 @@ const ToDoList = ({ todos }) => {
   })
 
   return (
-    <ul>
-      { toDoList }
-    </ul>
-  )
+    <div>
+      {toDoList.length > 0 && 
+        <ul>{ toDoList }</ul>
+      }
+    </div>
+  );
 }
 
 const mapStateToProps = state => ({
