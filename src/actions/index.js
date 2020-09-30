@@ -4,3 +4,10 @@ export const addToDo = toDo => {
     toDo
   }
 }
+
+export const markToDoAsComplete = toDo => {
+  return {
+    type: 'COMPLETE_TODO',
+    toDo
+  }
+}
