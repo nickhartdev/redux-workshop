@@ -1,4 +1,4 @@
-export const createTodo = toDo => ({
+export const addToDo = toDo => ({
   type: 'ADD_TODO',
   toDo
 })
