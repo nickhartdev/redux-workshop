@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { addToDo } from '../actions';
+import { connect } from 'react-redux';
 
 class AddTodoForm extends Component {
   constructor(props) {
@@ -11,7 +13,8 @@ class AddTodoForm extends Component {
   }
 
   submitForm = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    this.props.addToDo(this.state.todo);
     this.setState({ todo: '' });
   }
 
