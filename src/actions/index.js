@@ -1,4 +1,6 @@
-export const addToDo = toDo => ({
-  type: 'ADD_TODO',
-  toDo
-})
+export const addToDo = toDo => {
+  return {
+    type: 'ADD_TODO',
+    toDo
+  }
+}
