@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ToDo from './ToDo/ToDo';
+import VisibilityButtons from '../containers/VisibilityButtons';
 
 const ToDoList = ({ todos }) => {
   const toDoList = todos.map(todo => {
@@ -14,11 +15,7 @@ const ToDoList = ({ todos }) => {
 
   return (
     <div>
-      <section className="buttons-container">
-        <button>Show All</button>
-        <button>Show Active</button>
-        <button>Show Completed</button>
-      </section>
+      <VisibilityButtons />
       {toDoList.length > 0 && <ul>{toDoList}</ul>}
     </div>
   );

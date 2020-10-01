@@ -2,29 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import { changeFilter } from '../actions';
 
-const VisibilityButtons = ({ innerText }) => {
-  const setFilter = buttonText => {
-    switch (buttonText) {
-      case 'Show All':
-        changeFilter('all');
-      case 'Show Active':
-        changeFilter('active');
-      case 'Show completed':
-        changeFilter('completed');
-      default:
-        changeFilter('all');
-    }
-  }
-
+const VisibilityButtons = ({ changeFilter }) => {
   return (
     <section>
-      <button onClick={(e) => setFilter(e.target.innerText)}>
+      <button onClick={(e) => changeFilter('all')}>
         Show All
       </button>
-      <button onClick={(e) => setFilter(e.target.innerText)}>
+      <button onClick={(e) => changeFilter('active')}>
         Show Active
       </button>
-      <button onClick={(e) => setFilter(e.target.innerText)}>
+      <button onClick={(e) => changeFilter('completed')}>
         Show Completed
       </button>
     </section>

@@ -1,8 +1,8 @@
-export const filter = (state = [], action) => {
+export const filter = (state = '', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      state.filter = action.filter;
-      return state.filter;
+      state = action.filter;
+      return state;
     default:
       return state;
   }
