@@ -11,3 +11,10 @@ export const markToDoAsComplete = id => {
     id
   }
 }
+
+export const changeFilter = filter => {
+  return {
+    type: 'CHANGE_FILTER',
+    filter
+  }
+}
