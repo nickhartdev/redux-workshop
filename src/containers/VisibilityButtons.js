@@ -4,7 +4,7 @@ import { changeFilter } from '../actions';
 
 const VisibilityButtons = ({ changeFilter }) => {
   return (
-    <section>
+    <section className="visibility-buttons-container">
       <button onClick={(e) => changeFilter('all')}>
         Show All
       </button>

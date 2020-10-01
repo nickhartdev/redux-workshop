@@ -50,12 +50,6 @@ button:hover {
   cursor: pointer;
 }
 
-button:focus {
-  background: white;
-  border: 1px solid black;
-  color: black;
-}
-
 ul {
     width: 500px;
     margin: 0 auto;
@@ -75,6 +69,21 @@ li {
 
 .App {
   text-align: center;
+}
+
+.visibility-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.visibility-buttons-container > button {
+  margin: 9px;
+}
+
+.visibility-buttons-container > button:focus {
+  background: white;
+  border: 1px solid black;
+  color: black;
 }
 
 .FilterMenu {
