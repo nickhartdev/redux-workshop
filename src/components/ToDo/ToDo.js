@@ -2,17 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { markToDoAsComplete } from '../../actions'
 
-export const ToDo = ({ id, todo, completed }) => {
-  const invokeMarkToDoAsComplete = () => {
-    markToDoAsComplete(id);
-  }
-
+const ToDo = ({ id, todo, completed, markToDoAsComplete }) => {
   return (
-    <li>
-      { todo }
-      <button onClick={ invokeMarkToDoAsComplete }>Mark as complete</button>
+    <li 
+      onClick={() => markToDoAsComplete(id)}
+      className={completed ? 'completed' : 'not-completed'}
+    >
+      {todo}
     </li>
-  )
+  );
 }
 
 const mapDispatchToProps = dispatch => ({

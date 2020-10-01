@@ -6,7 +6,6 @@ export const addToDo = toDo => {
 }
 
 export const markToDoAsComplete = id => {
-  console.log('firing action creator')
   return {
     type: 'COMPLETE_TODO',
     id
