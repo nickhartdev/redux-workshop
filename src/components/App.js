@@ -7,6 +7,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Another Todo Box</h1>
+        <section className="buttons-container">
+          <button>Show All</button>
+          <button>Show Active</button>
+          <button>Show Show Completed</button>
+        </section>
         <AddTodoForm />
         <ToDoList />
       </div>
