@@ -50,6 +50,12 @@ button:hover {
   cursor: pointer;
 }
 
+button:focus {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
+
 ul {
     width: 500px;
     margin: 0 auto;
