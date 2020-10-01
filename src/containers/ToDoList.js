@@ -21,8 +21,21 @@ const ToDoList = ({ todos }) => {
   );
 }
 
+const filterVisibleToDos = (toDos, filter) => {
+  switch (filter) {
+    case 'all':
+      return toDos;
+    case 'active':
+      return toDos.filter(toDo => !toDo.completed);
+    case 'completed':
+      return toDos.filter(toDo => toDo.completed);
+    default:
+      return toDos;
+  }
+}
+
 const mapStateToProps = state => ({
-  todos: state.todos
+  todos: filterVisibleToDos(state.todos, state.filter)
 })
 
 export default connect(mapStateToProps)(ToDoList);
